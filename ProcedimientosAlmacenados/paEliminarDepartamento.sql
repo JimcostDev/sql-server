@@ -1,0 +1,32 @@
+USE [BD_II]
+GO
+
+/****** Object:  StoredProcedure [dbo].[paEliminarDepartamento]    Script Date: 13/03/2021 21:02:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[paEliminarDepartamento]
+@dep_codigo CHAR(10),
+@pai_codigo CHAR(10)
+AS
+IF EXISTS (SELECT 1 FROM DEPARTAMENTO WHERE dep_codigo=@dep_codigo AND pai_codigo=@pai_codigo)
+BEGIN 
+	IF NOT EXISTS (SELECT 1 FROM CIUDAD WHERE dep_codigo=@dep_codigo AND pai_codigo=@pai_codigo)
+		BEGIN
+			DELETE FROM  DEPARTAMENTO WHERE dep_codigo=@dep_codigo AND pai_codigo=@pai_codigo
+			SELECT 'DEPARTAMENTO SE ELIMINO CORRECTAMENTE' AS RESULTADO
+		END
+	ELSE
+		BEGIN
+			SELECT 'NO SE PUEDE ELIMINAR DEPARTAMENTO, TIENE RELACIONES EN CIUDAD.' AS RESULTADO
+		END
+END
+ELSE
+	BEGIN
+		SELECT 'DEPARTAMENTO NO EXISTE' AS RESULTADO
+	END
+GO
+
