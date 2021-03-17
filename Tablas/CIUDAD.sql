@@ -1,0 +1,31 @@
+USE [BD_II]
+GO
+
+/****** Object:  Table [dbo].[CIUDAD]    Script Date: 17/03/2021 11:21:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CIUDAD](
+	[ciu_codigo] [char](10) NOT NULL,
+	[ciu_nombre] [char](40) NOT NULL,
+	[dep_codigo] [char](10) NOT NULL,
+	[pai_codigo] [char](10) NOT NULL,
+ CONSTRAINT [PK_CIUDAD] PRIMARY KEY CLUSTERED 
+(
+	[ciu_codigo] ASC,
+	[dep_codigo] ASC,
+	[pai_codigo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[CIUDAD]  WITH CHECK ADD  CONSTRAINT [FK_CIUDAD_DEPARTAMENTO] FOREIGN KEY([dep_codigo], [pai_codigo])
+REFERENCES [dbo].[DEPARTAMENTO] ([dep_codigo], [pai_codigo])
+GO
+
+ALTER TABLE [dbo].[CIUDAD] CHECK CONSTRAINT [FK_CIUDAD_DEPARTAMENTO]
+GO
+
