@@ -1,13 +1,4 @@
--- ------------------- ---
--- Tottix Channel 2020
---  ------------------ ---
--- Script para generar otro script donde
--- se pueden recrear el mapping entre login
--- y usuario dentro de una determinada base de datos.
--- Este script no require parametros.
---
--- Creado por Ernesto Vazquez Junio 2020.
--- para mas informacion tottixchannel@gmail.com
+
 set nocount on
 go
 

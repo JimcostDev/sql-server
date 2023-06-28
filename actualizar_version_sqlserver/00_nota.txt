@@ -1,0 +1,24 @@
+1. Backups de bds y users.
+
+RESPALDO:
+-- primero realizar el backup de tus bases de datos
+-- realizar backup para recrear tus logins (ejecuatar script respectivo, 01_recrear_logins.sql)
+	** este script crea un sp en master llamado sp_help_revlogin (ejecutar y guardar resultado)
+	** nos da como resultado un script para recrear los loggins 
+-- backup para logins mapping (ejecuatar script respectivo, 02_login_mappings)
+	** nos da como resultado un script para recrear los mappings (guardar resultado)
+-- finalmenete server roles (ejecuatar script respectivo, 03_server_roles)
+	** nos da como resultado un script para recrear los roles (guardar resultado)
+-- guardar los scripts que se genrean al ejecutar cada paso anterior (IMPORTANTE)
+-- Desintalar version anterior de SQL Server
+RESTAURACIÓN:
+-- primero restaurar las bds
+-- recrear los loggings (usar scripts guardados previamente)
+	** - tendra errores de los loggins por defecto de sql porque estos ya estan creados
+-- recrear los mappings 
+-- recrear los roles
+-- Video explicativo: https://youtu.be/ljYuyqu2pYg
+
+2. Respaldar tu plan de mantenimiento
+
+-- Video explicativo: https://youtu.be/gVa86ognUwc

@@ -1,12 +1,8 @@
--- ------------------- ---
--- Tottix Channel 2020
---  ------------------ ---
+
 -- Script para generar otro script donde
 -- se pueden regenerar lo configuracion de los miembros
 -- adscritos a un determinado rol.
---
--- Creado por Ernesto Vazquez Junio 2020.
--- para mas informacion tottixchannel@gmail.com
+
 set nocount off;
 go
 
