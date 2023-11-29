@@ -30,6 +30,6 @@ END
 
 --probrar
 SELECT * FROM Team
-INSERT INTO Team (Name, LeagueID) VALUES ('Manchester City', 1)
+INSERT INTO Team (Name, LeagueID) VALUES ('Valencia', 3)
 SELECT * FROM TeamAudit
 

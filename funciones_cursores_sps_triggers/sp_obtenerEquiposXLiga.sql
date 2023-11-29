@@ -12,4 +12,5 @@ END
 
 
 -- Llamar al procedimiento almacenado y pasar el ID de la liga (por ejemplo, 1)
-EXEC ObtenerEquiposPorLiga @LeagueID = 1
+EXEC ObtenerEquiposPorLiga @LeagueID = 2
+
