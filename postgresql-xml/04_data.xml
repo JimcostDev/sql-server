@@ -1,0 +1,18 @@
+<Employees>
+    <Employee id="1">
+        <EmployeeID>1</EmployeeID>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+        <DepartmentID>1</DepartmentID>
+        <DepartmentName>IT</DepartmentName>
+    </Employee>
+    <Employee id="2">
+        <EmployeeID>2</EmployeeID>
+        <FirstName>Jane</FirstName>
+        <LastName>Smith</LastName>
+        <DepartmentID>2</DepartmentID>
+        <DepartmentName>HR</DepartmentName>
+    </Employee>
+</Employees>
+
+<!-- https://www.freeformatter.com/xml-validator-xsd.html -->
